@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"time"
 
@@ -24,8 +25,8 @@ func main() {
 			"unit": "temperature",
 		}
 		fields := map[string]interface{}{
-			"avg": 24.5,
-			"max": 45,
+			"avg": rand.Float64() * 5,
+			"max": rand.Int(),
 		}
 		p := influxdb2.NewPoint("stat", tags, fields, time.Now())
 		time.Sleep(1 * time.Second) // separate points by 1 second
