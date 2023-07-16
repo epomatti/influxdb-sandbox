@@ -12,4 +12,8 @@ Get the token:
 export INFLUXDB_TOKEN="<token>"
 ```
 
+Run the code with data feed and queries:
 
+```sh
+go run .
+```
